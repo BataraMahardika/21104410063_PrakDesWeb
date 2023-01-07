@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			/* Style the header */
+			header {
+				background-color: #666;
+				padding: 30px;
+				text-align: center;
+				font-size: 35px;
+				color: white;
+			}
+
+			/* Create two clumns/boxes that floats next to each other */
+			nav {
+				float: left;
+				width: 30%;
+				height: 300px; /* Only for demonstration, should be removed*/
+				background: #ccc;
+				padding: 20px;
+			}
+
+			/* Style the list inside the menu */
+			nav ul {
+				list-style-type: none;
+				padding: 0;
+			}
+
+			article {
+				float: left;
+				padding: 20px;
+				width: 70%;
+				background-color: #f1f1f1;
+				height: 300px; /* only for demonstration, should be removed*/
+			}
+
+			/* Clear floats after the columns */
+			section::after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+
+			/* style the footer */
+			footer {
+				background-color: #777;
+				padding: 10px;
+				text-align: center;
+				color: white;
+			}
+
+			/* Responsive layout - makes the two columns/boxes stack on top of each other instead of nex to */
+			@media (max-width: 600px) {
+				nav,
+				article {
+					width: 100%;
+					height: auto;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h2>Cities</h2>
+		</header>
+
+		<section>
+			<nav>
+				<ul>
+					<li><a href="#london">London</a></li>
+					<li><a href="#paris">Paris</a></li>
+					<li><a href="#tokyo">Tokyo</a></li>
+				</ul>
+			</nav>
+
+			<article id="london">
+				<h1>London</h1>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, labore recusandae cum vero culpa cupiditate esse quia consectetur veritatis. Ullam, labore! Saepe pariatur labore repellendus similique illum, asperiores, inventore
+					dolor sit minima numquam sed, magni exercitationem animi error et quae veritatis! Ipsam dicta aperiam voluptatum incidunt quam, dignissimos quos at!
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio impedit repudiandae modi! Nostrum distinctio quo corporis ipsum ipsam vero vel laudantium repudiandae earum? Aut commodi, ratione fugiat accusantium et atque?
+				</p>
+			</article>
+		</section>
+
+		<footer>
+			<p>Footer</p>
+		</footer>
+	</body>
+</html>
